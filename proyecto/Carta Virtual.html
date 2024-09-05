@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Hola Linda!</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url('fondo1.png'); /* URL de la imagen de fondo */
+            background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+            background-position: center; /* Centra la imagen de fondo */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            font-family: Arial, sans-serif;
+            color: white; /* Cambia el color del texto para que sea visible sobre el fondo */
+        }
+        h1 {
+            color: #f27b03;
+            margin-top: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombras para mejorar legibilidad */
+        }
+        button {
+            background-color: #f27b03;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        button:hover {
+            background-color: #f27b03;
+        }
+        #imageContainer {
+            margin-top: 20px;
+            display: none;
+        }
+        img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¡Hola!, ¡¡Estoy Hecha Para Recordarte Lo Feliz Que Me Hace Pasar Tiempo Contigo!!</h1>
+    <p>¿No Me Crees?</p>
+    <button onclick="toggleImagen()">Sorpresa!!</button>
+
+    <div id="imageContainer">
+        <img src="imagen1.jpeg" alt="Imagen linda">
+    </div>
+
+    <script>
+        function toggleImagen() {
+            var imageContainer = document.getElementById('imageContainer');
+            if (imageContainer.style.display === 'none' || imageContainer.style.display === '') {
+                imageContainer.style.display = 'block'; // Mostrar imagen
+            } else {
+                imageContainer.style.display = 'none'; // Ocultar imagen
+            }
+        }
+    </script>
+
+</body>
+</html>
